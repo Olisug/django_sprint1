@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}
+  Блогикум. Лента записей
+{% endblock %}
+{% block content %}
+  <h1>Лента записей</h1>
+  <ul>
+  {% for post in posts %}
+    <li>
+      <h3>{{ post.location }}</h3>
+    </li>
+    {% if not forloop.last %}
+    {% endif %}
+  {% endfor %}
+</ul>   
+{% endblock %}
