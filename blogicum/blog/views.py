@@ -45,18 +45,21 @@ posts = [
 
 
 def index(request):
+    "Открывает главную страницу - Лента записей"
     template = 'blog/index.html'
     context = {'posts': posts}
     return render(request, template, context)
 
 
 def post_detail(request, pk):
+    "Открывает детальное описание постов"
     template = 'blog/detail.html'
     context = {'post': posts[pk]}
     return render(request, template, context)
 
 
 def category_posts(request, category_slug):
+    "Открывает описание категории"
     template = 'blog/category.html'
     context = {'category': category_slug}
     return render(request, template, context)
