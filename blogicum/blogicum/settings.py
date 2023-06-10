@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%3_+ht=zm=-+m3icr*0d1_t)1_%fb+g@tk1wfet161dbfl2d)j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -54,6 +54,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'blogicum.urls'
 
 TEMPLATES_DIR = BASE_DIR / 'templates'
+STATICFILES_DIRS = [BASE_DIR / 'static_dev']
+
 
 TEMPLATES = [
     {

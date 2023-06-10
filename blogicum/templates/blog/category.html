@@ -1,7 +1,11 @@
 {% extends "base.html" %}
-{% block title %}
-  Блогикум. Категории
-{% endblock %}
+<div class="container py-3">
+  {% block title %}
+    Блогикум. Категории
+  {% endblock %}
+</div>
 {% block content %}
-  <h1>Публикации в категории - {{ category }} </h1>
+  <div class="container py-3">
+    <h1>Публикации в категории - {{ category }} </h1>
+  </div>
 {% endblock %}

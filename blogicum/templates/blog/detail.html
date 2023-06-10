@@ -3,10 +3,12 @@
   Блогикум. Лента записей
 {% endblock %}
 {% block content %}
-<ul>
-<li><h4>Место: {{ post.location }}</h4></li>
-<li><h4>Дата: {{ post.date}}</h4></li>
-<li><h4>Категория: <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a></h4></li>
-<p>{{ post.text }}</p>
-</ul>
+  <div class="container py-3">
+    <ul>
+      <li>Место: {{ post.location }}</li>
+      <li>Дата: {{ post.date}}</li>
+      <li>Категория: <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a></li>
+    </ul>
+      <p>{{ post.text }}</p>
+  </div>
 {% endblock %}
