@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 posts = [
     {
@@ -47,7 +48,7 @@ posts = [
 def index(request):
     "Открывает главную страницу - Лента записей"
     template = 'blog/index.html'
-    context = {'posts': posts}
+    context = {'posts': reversed(posts)}
     return render(request, template, context)
 
 
