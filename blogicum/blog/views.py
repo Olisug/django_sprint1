@@ -55,9 +55,9 @@ def index(request):
 def post_detail(request, post_id):
     "Открывает детальное описание постов"
     for post in posts:
-        if post_id in post.values():
+        if post_id == post['id']:
             template = 'blog/detail.html'
-            context = {'post': posts[post_id]}
+            context = {'post': post}
             return render(request, template, context)
     raise Http404("Страница не найдена")
 
